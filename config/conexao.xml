@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDataSet>
+  <valor>
+    <id> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x12;0J1N1J1&#x1A;0</id>
+    <nome> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x1A;03113.373%3#313&#x0;131"131&#x1A;0</nome>
+    <ativa> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x13;0414373'3&#x1A;0</ativa>
+    <utilizarstringconexao> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x14;0&amp;1#3.353'3&#x1A;0</utilizarstringconexao>
+    <stringconexao> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1 1&#x1A;0</stringconexao>
+    <provider> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x19;03111,1/1,1%1$1"1N1"2&#x1A;0</provider>
+    <servidorbd> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x1B;0$2&amp;2N1#2$2*2N1)2'2N1*2)2&#x1A;0</servidorbd>
+    <servidorcomponente> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x1C;0#32323.3+3%3#363+31303"2"2&#x1A;0</servidorcomponente>
+    <servidor> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x1D;053$353(113/313.313)3#3%3#313&#x1A;0</servidor>
+    <nomebd> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x1B;0&amp;3$331"13101$1#1)13111,1&#x1A;0</nomebd>
+    <timeoutbd> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x13;0$2'2!2!2&#x1A;0</timeoutbd>
+    <usuariobd> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x16;07353'34331"131&#x1A;0</usuariobd>
+    <senhabd> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x1A;053$35301#35353931343&amp;3&#x1A;0</senhabd>
+    <habilitarpool> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x14;0&amp;1#3.353'3&#x1A;0</habilitarpool>
+    <minpool> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x10;0!2&#x1A;0</minpool>
+    <maxpool> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x11;0&amp;2!2&#x1A;0</maxpool>
+    <habilitarressubmissaoautomaticabd> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x14;0&amp;1#3.353'3&#x1A;0</habilitarressubmissaoautomaticabd>
+    <numeroressubmissoesbd> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x10;0&amp;2&#x1A;0</numeroressubmissoesbd>
+    <intervaloentreressubmissoesbd> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x13;0&amp;2!2!2!2&#x1A;0</intervaloentreressubmissoesbd>
+    <classepersistencia> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1I2&#x10;031'303+31343N1&amp;143#3/3'3931343-3N1.173%3.3'313N1-1#35363'343N1'30363)103(343#3'353634373637343#3N131'34383+3%313N101'34353+35363'303%3+3#33111,131'34383'343L131'303+31343N1&amp;143#3/3'3931343-3N1.173%3.3'313N1-1#35363'343N1'30363)103(343#3'353634373637343#3L1"2N1!2N1!2N1!2L1!2"2'2!2(2%2'3$3&amp;2%3)2%2)2"2%3'2&#x1A;0</classepersistencia>
+    <auditoria> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x14;0&amp;1#3.353'3&#x1A;0</auditoria>
+    <utilizaruppercase> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x14;0&amp;1#3.353'3&#x1A;0</utilizaruppercase>
+    <diretoriovirtualportugues> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1 1&#x1A;0</diretoriovirtualportugues>
+    <diretoriovirtualingles> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1 1&#x1A;0</diretoriovirtualingles>
+    <diretoriovirtualespanhol> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1 1&#x1A;0</diretoriovirtualespanhol>
+    <dominio> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1 1&#x1A;0</dominio>
+  </valor>
+  <valor>
+    <id> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x14;031"1312161&#x1A;0</id>
+    <nome> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x1C;03113.373%3#313&#x0;131"1312161&#x1A;0</nome>
+    <ativa> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x13;0414373'3&#x1A;0</ativa>
+    <utilizarstringconexao> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x13;0414373'3&#x1A;0</utilizarstringconexao>
+    <stringconexao> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1@2&#x10;0$1#363#3&#x0;131137343%3'3.23121316121!2"2)2&lt;13111,1#2!2"2#2,2)103+363+3#3.3&#x0;1#1#363#3.313)3.2&amp;3$331"1312161$1'353'3038313.383+3/3'3036313,201'34353+35363&#x0;131'3%37343+363;3&#x0;1)103(313.2414373'3,25153'343&#x0;1)1$1.27353'34331"1312161$1'353'3038313.383+3/3'3036313,201#35353931343&amp;3.2'1%121513151&#x1A;0</stringconexao>
+    <provider> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1 1&#x1A;0</provider>
+    <servidorbd> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1 1&#x1A;0</servidorbd>
+    <servidorcomponente> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1 1&#x1A;0</servidorcomponente>
+    <servidor> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1 1&#x1A;0</servidor>
+    <nomebd> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1 1&#x1A;0</nomebd>
+    <timeoutbd> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x13;0$2'2!2!2&#x1A;0</timeoutbd>
+    <usuariobd> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1 1&#x1A;0</usuariobd>
+    <senhabd> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1 1&#x1A;0</senhabd>
+    <habilitarpool> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x14;0&amp;1#3.353'3&#x1A;0</habilitarpool>
+    <minpool> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x10;0!2&#x1A;0</minpool>
+    <maxpool> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x10;0!2&#x1A;0</maxpool>
+    <habilitarressubmissaoautomaticabd> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x14;0&amp;1#3.353'3&#x1A;0</habilitarressubmissaoautomaticabd>
+    <numeroressubmissoesbd> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x10;0!2&#x1A;0</numeroressubmissoesbd>
+    <intervaloentreressubmissoesbd> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x10;0!2&#x1A;0</intervaloentreressubmissoesbd>
+    <classepersistencia> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1I2&#x10;031'303+31343N1&amp;143#3/3'3931343-3N1.173%3.3'313N1-1#35363'343N1'30363)103(343#3'353634373637343#3N131'34383+3%313N101'34353+35363'303%3+3#33111,131'34383'343L131'303+31343N1&amp;143#3/3'3931343-3N1.173%3.3'313N1-1#35363'343N1'30363)103(343#3'353634373637343#3L1"2N1!2N1!2N1!2L1!2"2'2!2(2%2'3$3&amp;2%3)2%2)2"2%3'2&#x1A;0</classepersistencia>
+    <auditoria> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x14;0&amp;1#3.353'3&#x1A;0</auditoria>
+    <utilizaruppercase> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1&#x14;0&amp;1#3.353'3&#x1A;0</utilizaruppercase>
+    <diretoriovirtualportugues> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1 1&#x1A;0</diretoriovirtualportugues>
+    <diretoriovirtualingles> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1 1&#x1A;0</diretoriovirtualingles>
+    <diretoriovirtualespanhol> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1 1&#x1A;0</diretoriovirtualespanhol>
+    <dominio> 1&#x10;0 1 1 146464646&#x10;0 1 1 1 1 1 1 1&#x15;0&#x10;0 1 1 1 1&#x1A;0</dominio>
+  </valor>
+</NewDataSet>

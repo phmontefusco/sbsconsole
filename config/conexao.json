@@ -1,0 +1,21 @@
+{
+  "conexao": {
+    "id": "*.*",
+    "nome": "Solução SBS",
+    "ativa": "1",
+    "utilizarstringconexao": "0",
+    "stringconexao": "",
+    "servidorbd": "SRSSPN180\\SLQ2017",
+    "nomebd": "dbSBSPDCISQL",
+    "timeoutbd": "3600",
+    "usuariobd": "userSBSPDCISQL",
+    "senhabd": "sbsPassword",
+    "habilitarpool": "0",
+    "minpool": "0",
+    "maxpool": "50",
+    "habilitarressubmissaoautomaticabd": "0",
+    "numeroressubmissoesbd": "50",
+    "intervaloentreressubmissoesbd": "5000",
+    "utilizaruppercase": "0"
+  }
+}

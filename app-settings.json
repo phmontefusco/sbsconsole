@@ -1,0 +1,90 @@
+{
+  "Configuration": {
+    "ConsoleTitle": "CONSOLE-TITLE"
+  },
+  "ConfigurationSBS": {
+    "ProxyConfig": {
+      "proxynamespaceassembly": "D:\\DEV\\Workspace\\sbs\\pd_sbs\\SBS\\config\\proxy.xml",
+      "proxynamespaceassemblythirdparty": "D:\\DEV\\Workspace\\sbs\\pd_sbs\\SBS\\config\\proxySenior.xml",
+      "proxynamespacepersistencia": "D:\\DEV\\Workspace\\sbs\\pd_sbs\\SBS\\config\\proxypersistencia.xml"
+    },
+    "PersistenciaConfig": {
+      "conexao": {
+        "id": "*.*",
+        "nome": "Solução SBS",
+        "ativa": "1",
+        "utilizarstringconexao": "0",
+        "stringconexao": "",
+        "servidorbd": "SRSSPN180\\SLQ2017",
+        "nomebd": "dbSBSPDCISQL",
+        "timeoutbd": "3600",
+        "usuariobd": "userSBSPDCISQL",
+        "senhabd": "sbsPassword",
+        "habilitarpool": "0",
+        "minpool": "0",
+        "maxpool": "50",
+        "habilitarressubmissaoautomaticabd": "0",
+        "numeroressubmissoesbd": "50",
+        "intervaloentreressubmissoesbd": "5000",
+        "utilizaruppercase": "0"
+      }
+    },
+    "SegurancaConfig": {
+      "autenticacao": "D:\\DEV\\Workspace\\sbs\\pd_sbs\\sbs\\config\\autenticacao.xml"
+    },
+    "ServiceConfig": {
+      "servicoweb": "D:\\DEV\\Workspace\\sbs\\pd_sbs\\sbs\\config\\servicoweb.xml"
+    }
+  },
+  "Serilog": {
+    "Using": [
+      "Serilog.Sinks.Console"
+    ],
+    "MinimumLevel": "Debug",
+    "WriteTo": [
+      {
+        "Name": "Console"
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "%TEMP%\\Logs\\serilog-configuration-sample.txt"
+        }
+      }
+    ],
+    "Enrich": [
+      "FromLogContext",
+      "WithMachineName",
+      "WithThreadId"
+    ],
+    "Destructure": [
+      {
+        "Name": "With",
+        "Args": {
+          "policy": "Sample.CustomPolicy, Sample"
+        }
+      },
+      {
+        "Name": "ToMaximumDepth",
+        "Args": {
+          "maximumDestructuringDepth": 4
+        }
+      },
+      {
+        "Name": "ToMaximumStringLength",
+        "Args": {
+          "maximumStringLength": 100
+        }
+      },
+      {
+        "Name": "ToMaximumCollectionCount",
+        "Args": {
+          "maximumCollectionCount": 10
+        }
+      }
+    ],
+    "Properties": {
+      "Application": "Sample"
+    }
+  }
+}
