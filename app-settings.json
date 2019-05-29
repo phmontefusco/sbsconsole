@@ -1,32 +1,30 @@
 {
-  "Configuration": {
-    "ConsoleTitle": "CONSOLE-TITLE"
-  },
-  "ConfigurationSBS": {
+  "ConfigSBS": {
+    "chave1": "chavexxx",
     "ProxyConfig": {
       "proxynamespaceassembly": "D:\\DEV\\Workspace\\sbs\\pd_sbs\\SBS\\config\\proxy.xml",
       "proxynamespaceassemblythirdparty": "D:\\DEV\\Workspace\\sbs\\pd_sbs\\SBS\\config\\proxySenior.xml",
       "proxynamespacepersistencia": "D:\\DEV\\Workspace\\sbs\\pd_sbs\\SBS\\config\\proxypersistencia.xml"
     },
     "PersistenciaConfig": {
-      "conexao": {
+      "conexaoConfig": {
         "id": "*.*",
         "nome": "Solução SBS",
-        "ativa": "1",
-        "utilizarstringconexao": "0",
+        "ativa": true,
+        "utilizarstringconexao": false,
         "stringconexao": "",
         "servidorbd": "SRSSPN180\\SLQ2017",
-        "nomebd": "dbSBSPDCISQL",
+        "nomeBD": "dbSBSPDCISQL",
         "timeoutbd": "3600",
         "usuariobd": "userSBSPDCISQL",
         "senhabd": "sbsPassword",
-        "habilitarpool": "0",
+        "habilitarpool": false,
         "minpool": "0",
         "maxpool": "50",
-        "habilitarressubmissaoautomaticabd": "0",
+        "habilitarressubmissaoautomaticabd": false,
         "numeroressubmissoesbd": "50",
         "intervaloentreressubmissoesbd": "5000",
-        "utilizaruppercase": "0"
+        "utilizaruppercase": false
       }
     },
     "SegurancaConfig": {
@@ -35,6 +33,9 @@
     "ServiceConfig": {
       "servicoweb": "D:\\DEV\\Workspace\\sbs\\pd_sbs\\sbs\\config\\servicoweb.xml"
     }
+  },
+  "Configuration": {
+    "ConsoleTitle": "CONSOLE-TITLE"
   },
   "Serilog": {
     "Using": [

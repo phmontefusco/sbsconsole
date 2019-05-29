@@ -14,19 +14,14 @@ namespace sbsconsole
         private readonly ITestService _testService;
         //private readonly ILogger<AppController> _logger;
         private readonly ILogger _logger;
-        private readonly ConfigurationSBS _config;
+        private readonly IOptions<ConfigSBS> _config;
         private readonly ICalcService _calc;
 
-
-        // public AppController(ITestService testService,
-        //     IOptions<ConfigurationSBS> config,
-        //     ILogger logger,
-        //     ICalcService calc)
         public AppController(IServiceProvider service)
         {
             _testService = service.GetRequiredService<ITestService>(); //testService;
             _logger = service.GetRequiredService<ILogger>(); //logger;
-            //_config = service.GetRequiredService<ILoggIOptions<ConfigurationSBS>>(); // config.Value;
+            _config = service.GetRequiredService<IOptions<ConfigSBS>>(); // config.Value;
             _calc = service.GetRequiredService<ICalcService>();
         }
 

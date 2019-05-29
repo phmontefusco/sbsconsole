@@ -1,23 +1,32 @@
+using System;
 using System.Collections.Generic;
 using Sinqia.Framework.Model;
 
 namespace Sinqia.Framework.Model
 {
-    public class ConfigurationSBS
+    public class ConfigSBS
     {
         /// <summary>
         /// Sets header title in console window
         /// </summary>
 
-        public ProxyConfig proxySBS { get; set; }
+        public string chave1 { get; set; }
 
-        public PersistenciaConfig persistenciaSBS { get; set; }
+        public ProxyConfig proxyConfig { get; set; }
 
-        public SegurancaConfig segurancaSBS { get; set; }
+        public PersistenciaConfig persistenciaConfig { get; set; }
 
-        public ServiceConfig serviceSBS { get; set; }
+        public SegurancaConfig segurancaConfig { get; set; }
+
+        public ServiceConfig serviceConfig { get; set; }
 
 
+        // public ConfigSBS(ConfigSBSSettings conf)
+        // {
+        //     if (conf == null) throw new ArgumentNullException(nameof(conf));
+        //     chave1 = conf.chave1;
+
+        // }
         public class ProxyConfig
         {
             public string proxynamespaceassembly { get; set; }
@@ -28,7 +37,7 @@ namespace Sinqia.Framework.Model
         public class PersistenciaConfig
         {
             //public string conexao { get; set; }
-            public ConexaoConfig conexaoSBS { get; set; }
+            public ConexaoConfig conexaoConfig { get; set; }
 
         }
 
@@ -41,5 +50,13 @@ namespace Sinqia.Framework.Model
         {
             public string servicoweb { get; set; }
         }
+    }
+
+    public class ConfigSBSSettings
+    {
+
+
+        public string chave1;
+
     }
 }

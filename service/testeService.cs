@@ -13,13 +13,13 @@ namespace sbsconsole.services
     public class TestService : ITestService
     {
         private readonly ILogger _logger;
-        private readonly ConfigurationSBS _config;
+        //private readonly ConfigSBS _config;
 
-        public TestService(ILogger logger,
-            IOptions<ConfigurationSBS> config)
+        public TestService(ILogger logger)//,
+                                          //IOptions<ConfigSBS> config)
         {
             _logger = logger;
-            _config = config.Value;
+            //_config = config.Value;
         }
         public void Run()
         {

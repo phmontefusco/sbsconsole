@@ -43,26 +43,28 @@ namespace Sinqia.Framework.Services
 
         private readonly ITraceInfra _tracerInfra;
         private readonly IConfiguration _configuracao;
-        private readonly IOptions<ConfigurationSBS> _config;
+        private readonly IOptions<ConfigSBS> _config;
 
-        private readonly IConfigurationRoot _arqConf;
-        private readonly IEnumerable<IConfigurationProvider> _arqProvider;
-        public Configuracao(IServiceProvider service, IOptions<ConfigurationSBS> configAux, IConfigurationRoot arqConf)
+        // private readonly IConfigurationRoot _arqConf;
+
+        // private readonly IOptions<ConfigSBS> iop;
+        // private readonly IEnumerable<IConfigurationProvider> _arqProvider;
+
+        // IOptions<ConfigSBS> configAux,
+        //, IConfigurationRoot arqConf, IOptions<ConfigSBS> configAux
+        public Configuracao(IServiceProvider service)
         {
             _tracerInfra = service.GetRequiredService<ITraceInfra>();
-            //IOptions<ConfigurationSBS> arquivoConf
-            //_configuracao = service.GetRequiredService<IConfiguration>();
-            //_arqConf = arqConf.Providers.GetEnumerator().DATA;
-            this._config = configAux;
+            _config = service.GetService<IOptions<ConfigSBS>>();
         }
 
-        public string obterValorConexao(string pStrChave)
+        public string obterValorConexao()
         {
             try
             {
                 //var nome = _arqConf.GetValue<String>("PersistenciaSBS:Conexao:NomeBD");   //.persistenciaSBS.conexaoSBS.NomeBD;
 
-                var nome = _config.Value.persistenciaSBS.conexaoSBS.NomeBD;
+                var nome = _config.Value.persistenciaConfig.conexaoConfig.nomeBD;
                 return nome;
             }
             catch
@@ -1300,7 +1302,7 @@ namespace Sinqia.Framework.Services
     //     public static IServiceCollection AddConf(this IServiceCollection services, IConfigurationRoot configuration)
     //     {
     //         var section =
-    //             configuration.GetSection("ConfigurationSBS");
+    //             configuration.GetSection("ConfigSBS");
     //         // we first need to create an instance
     //         var settings = new BankSettings();
     //         // then we set the properties 
@@ -1315,6 +1317,6 @@ namespace Sinqia.Framework.Services
     public interface IConfiguracao
     {
 
-        string obterValorConexao(string pStrChave);
+        string obterValorConexao();
     }
 }

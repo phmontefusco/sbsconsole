@@ -9,74 +9,69 @@ namespace Sinqia.Framework.Model
     {
         public ConexaoConfig()
         {
-            Id = "*.*";
-            Nome = "base";
-            Ativa = true;
-            StringConexao = "";
-            Provider = "";
-            ServidorBD = "";
-            ServidorComponente = "";
-            Servidor = "";
-            NomeBD = "";
-            TimeOutBD = 5000;
-            UsuarioBD = "";
-            SenhaBD = "";
-            HabilitarPool = false;
-            MinPool = 0;
-            MaxPool = 50;
-            HabilitarRessubmissaoAutomaticaBD = false;
-            NumeroRessubmissoesBD = 15;
-            IntervaloEntreRessubmissoesBD = 5000;
-            ClassePersistencia = "";
-            DiretorioVirtualPortugues = "";
-            DiretorioVirtualIngles = "";
-            DiretorioVirtualEspanhol = "";
-            Dominio = "";
-            UtilizarStringConexao = false;
-            UtilizarUpperCase = false;
-            CaseSensitive = false;
+            id = "*.*";
+            nome = "base";
+            ativa = true;
+            stringConexao = "";
+            provider = "";
+            servidorBD = "";
+            servidorComponente = "";
+            servidor = "";
+            nomeBD = "";
+            timeOutBD = 5000;
+            usuarioBD = "";
+            senhaBD = "";
+            habilitarPool = false;
+            minPool = 0;
+            maxPool = 50;
+            habilitarRessubmissaoAutomaticaBD = false;
+            numeroRessubmissoesBD = 15;
+            intervaloEntreRessubmissoesBD = 5000;
+            classePersistencia = "";
+            diretorioVirtualPortugues = "";
+            diretorioVirtualIngles = "";
+            diretorioVirtualEspanhol = "";
+            dominio = "";
+            utilizarStringConexao = false;
+            utilizarUpperCase = false;
+            caseSensitive = false;
 
-            Auditoria = false;
+            auditoria = false;
         }
         // Cadastrais
-        public string Id;
-        public string Nome;
-        public bool Ativa;
+        public string id { get; set; }
+        public string nome { get; set; }
+        public bool ativa { get; set; }
 
         // BD 
-        public bool UtilizarStringConexao;
-
-        // BD - UtilizarStringConexao: true
-        public string StringConexao;
-
-        // BD - UtilizarStringConexao: False
-        public string ServidorBD;
-        public string NomeBD;
-        public long TimeOutBD;
-        public string UsuarioBD;
-        public string SenhaBD;
-        public bool UtilizarUpperCase;
-        public bool HabilitarPool;
-        public int MinPool;
-        public int MaxPool;
+        public bool utilizarStringConexao { get; set; }
+        public string stringConexao { get; set; }
+        public string servidorBD { get; set; }
+        public string nomeBD { get; set; }
+        public long timeOutBD { get; set; }
+        public string usuarioBD { get; set; }
+        public string senhaBD { get; set; }
+        public bool utilizarUpperCase { get; set; }
+        public bool habilitarPool { get; set; }
+        public int minPool { get; set; }
+        public int maxPool { get; set; }
 
         // BD - Ressubmiss�o Autom�tica
-        public bool HabilitarRessubmissaoAutomaticaBD;
-        public int NumeroRessubmissoesBD;
-        public int IntervaloEntreRessubmissoesBD;
-        public string ClassePersistencia;
+        public bool habilitarRessubmissaoAutomaticaBD;
+        public int numeroRessubmissoesBD;
+        public int intervaloEntreRessubmissoesBD;
+        public string classePersistencia;
 
-        public bool Auditoria;
+        public bool auditoria;
 
-        // Thiago Martins: remover/revisar na vers�o nova
-        internal bool CaseSensitive;
-        public string Provider;
-        public string ServidorComponente;
-        public string Servidor;
-        public string DiretorioVirtualPortugues;
-        public string DiretorioVirtualIngles;
-        public string DiretorioVirtualEspanhol;
-        public string Dominio;
+        internal bool caseSensitive;
+        public string provider;
+        public string servidorComponente;
+        public string servidor;
+        public string diretorioVirtualPortugues;
+        public string diretorioVirtualIngles;
+        public string diretorioVirtualEspanhol;
+        public string dominio;
 
 
 
