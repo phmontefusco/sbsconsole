@@ -42,28 +42,30 @@ namespace Sinqia.Framework.Services
         // /* ALT:02/07/2009-ATV:0081812-OC:009508-{{FIM}} */
 
         private readonly ITraceInfra _tracerInfra;
-        private readonly IConfiguration _configuracao;
         private readonly IOptions<ConfigSBS> _config;
 
-        // private readonly IConfigurationRoot _arqConf;
-
-        // private readonly IOptions<ConfigSBS> iop;
-        // private readonly IEnumerable<IConfigurationProvider> _arqProvider;
-
-        // IOptions<ConfigSBS> configAux,
-        //, IConfigurationRoot arqConf, IOptions<ConfigSBS> configAux
         public Configuracao(IServiceProvider service)
         {
             _tracerInfra = service.GetRequiredService<ITraceInfra>();
             _config = service.GetService<IOptions<ConfigSBS>>();
         }
 
+        public bool utilizaRedis()
+        {
+            try
+            {
+                var usaRedis = _config.Value.memoryConfig.providerRedisMemory;
+                return usaRedis;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public string obterValorConexao()
         {
             try
             {
-                //var nome = _arqConf.GetValue<String>("PersistenciaSBS:Conexao:NomeBD");   //.persistenciaSBS.conexaoSBS.NomeBD;
-
                 var nome = _config.Value.persistenciaConfig.conexaoConfig.nomeBD;
                 return nome;
             }
@@ -1316,6 +1318,8 @@ namespace Sinqia.Framework.Services
     // }
     public interface IConfiguracao
     {
+
+        bool utilizaRedis();
 
         string obterValorConexao();
     }

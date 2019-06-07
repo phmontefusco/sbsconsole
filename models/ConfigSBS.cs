@@ -20,13 +20,9 @@ namespace Sinqia.Framework.Model
 
         public ServiceConfig serviceConfig { get; set; }
 
+        public MemoryConfig memoryConfig { get; set; }
 
-        // public ConfigSBS(ConfigSBSSettings conf)
-        // {
-        //     if (conf == null) throw new ArgumentNullException(nameof(conf));
-        //     chave1 = conf.chave1;
 
-        // }
         public class ProxyConfig
         {
             public string proxynamespaceassembly { get; set; }
@@ -36,7 +32,6 @@ namespace Sinqia.Framework.Model
 
         public class PersistenciaConfig
         {
-            //public string conexao { get; set; }
             public ConexaoConfig conexaoConfig { get; set; }
 
         }
@@ -50,13 +45,16 @@ namespace Sinqia.Framework.Model
         {
             public string servicoweb { get; set; }
         }
+
+        public class MemoryConfig
+        {
+
+            public bool providerRedisMemory { get; set; }
+            public string providerServerMemory { get; set; }
+            public string providerInstanceMemory { get; set; }
+
+        }
+
     }
 
-    public class ConfigSBSSettings
-    {
-
-
-        public string chave1;
-
-    }
 }

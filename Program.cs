@@ -19,21 +19,8 @@ namespace sbsconsole
     static class SBSBatch
     {
 
-        //private static ConfigSBSSettings _confSBSXX;
-        //private static IOptions<ConfigSBS> _confSBS;
-
         static void Main(string[] args)
         {
-
-            // Valida os parametros de entrada
-            //string tipo;
-            //if (ValidarParametros(args, out tipo)) return;
-
-            // Log.Logger = new LoggerConfiguration()
-            // .MinimumLevel.Debug()
-            // .WriteTo.RollingFile("log\\consoleapp.log", fileSizeLimitBytes: 740)
-            // .CreateLogger();
-
 
             // create service collection
             var serviceCollection = new ServiceCollection();
@@ -43,9 +30,17 @@ namespace sbsconsole
             var serviceProvider = serviceCollection.BuildServiceProvider();
             var tracAux = serviceProvider.GetService<ITraceInfra>();
 
+            var mem = serviceProvider.GetService<IControleMemoria>();
+
+            mem.SetValor("HORA:1", "11");
+            mem.SetValor("HORA:2", "12");
+
+            var vamosver = mem.GetValor("HORA:1");
+            var vamosver2 = mem.GetValor("HORA:2");
 
             tracAux.WriteStart("Inicio Programa");
-
+            tracAux.WriteStart(vamosver);
+            tracAux.WriteStart(vamosver2);
 
             var cf = serviceProvider.GetService<IConfiguracao>();
 
@@ -59,81 +54,39 @@ namespace sbsconsole
 
         }
 
-
         public static void ConfigureServices(IServiceCollection serviceCollection)
         {
             IConfigurationRoot configuration;
 
-
-            // build configuration
-            configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("app-settings.json", optional: false, reloadOnChange: true)
-                .Build();
-
-
+            // // build configuration
+            configuration = serviceCollection.addConfigSBS("app-settings.json");
 
             serviceCollection.AddOptions();
 
-            IConfigurationSection sec = configuration.GetSection("ConfigSBS");
             serviceCollection.Configure<ConfigSBS>(configuration.GetSection("ConfigSBS"));
 
-            var ch = configuration.GetSection("ConfigSBS").Get<ConfigSBS>();
-
-            serviceCollection.Configure<ConfigSBS>(sec);
-
-
-            serviceCollection.AddSingleton<IConfigurationRoot>(configuration);
-            serviceCollection.AddSingleton<IConfiguration>(configuration);
-
-
             serviceCollection.AddSerilogServices("log\\consoleapp.log");
+
 
             // add services
             serviceCollection.AddTransient<ITestService, TestService>();
 
-            // add services
             serviceCollection.AddTransient<ICalcService, calcService>();
 
             serviceCollection.AddTransient<ITraceInfra, TracerInfra>();
 
             serviceCollection.AddTransient<IConfiguracao, Configuracao>();
 
+            serviceCollection.addMemory(false, "localhost:6379", "redisPH");
+
+            serviceCollection.AddTransient<IControleMemoria, ControleMemoria>();
+
             // add app
             serviceCollection.AddTransient<AppController>();
 
-            //serviceCollection.addMvc();
-
         }
 
-        // private static void addConfigSBS(this IServiceCollection services, IConfiguration configuration)
-        // {
-        //     var section = configuration.GetSection("ConfigSBS");
 
-        //     // we first need to create an instance
-        //     var settings = new ConfigSBSSettings();
-
-        //     // then we set the properties 
-        //     new ConfigureFromConfigurationOptions<ConfigSBSSettings>(section)
-        //         .Configure(settings);
-        //     // then we register the instance into the services collection
-        //     //services.AddSingleton(new ConfigSBS(settings));
-
-        //     // var _confSBS = configuration.GetSection("ConfigSBSSettings").Get<ConfigSBS>();
-        // }
-
-        // private static void configConsole(IOptions<ConfigSBS> arquivoConf)
-        // {
-        //     arquivoConf
-        //     var dd = configuration.GetSection("ConfigSBS");
-        //     var conexaoJson = configuration.GetSection("ConfigSBS:persistencia:conexao").Value;
-
-        //     configuration = new ConfigurationBuilder()
-        //                     //.SetBasePath(Directory.GetCurrentDirectory())
-        //                     .AddJsonFile(conexaoJson, optional: false, reloadOnChange: true)
-        //                     .Build();
-
-        // }
         private static void ConfigureConsole(IConfigurationRoot configuration)
         {
             // var dd = configuration.GetSection("ConfigSBS");
