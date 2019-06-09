@@ -49,7 +49,7 @@ namespace Sinqia.Framework.Model
         public class MemoryConfig
         {
 
-            public bool providerRedisMemory { get; set; }
+            public bool providerInMemory { get; set; }
             public string providerServerMemory { get; set; }
             public string providerInstanceMemory { get; set; }
 

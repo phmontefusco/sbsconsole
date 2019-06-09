@@ -34,7 +34,7 @@
       "servicoweb": "D:\\DEV\\Workspace\\sbs\\pd_sbs\\sbs\\config\\servicoweb.xml"
     },
     "MemoryConfig": {
-      "providerRedisMemory": true,
+      "providerInMemory": true,
       "providerServerMemory": "localhost:6379",
       "providerInstanceMemory": "redisPH"
     }

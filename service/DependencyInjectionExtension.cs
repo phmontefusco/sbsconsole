@@ -18,23 +18,21 @@ namespace Microsoft.Extensions.DependencyInjection
             return configuration;
         }
 
-        public static void addMemory(this IServiceCollection serviceCollection, bool usaRedis,
-                    string providerServerMemory, string providerInstanceMemory)
-        //public static void addMemory(this IServiceCollection serviceCollection, IConfiguracao conf)
+        public static void addMemory(this IServiceCollection serviceCollection, IConfigurationRoot configuration)
         {
-            if (usaRedis)
+            var usaMemoriaLocal = configuration.GetValue<bool>("ConfigSBS:MemoryConfig:providerInMemory");
+            //var _conf = conf.utilizaRedis;
+            if (usaMemoriaLocal)
             {
-                serviceCollection.AddDistributedRedisCache(options =>
-                {
-                    // options.Configuration = "localhost:6379";
-                    // options.InstanceName = "redisPH";
-                    options.Configuration = providerServerMemory;
-                    options.InstanceName = providerInstanceMemory;
-                });
+                serviceCollection.AddDistributedMemoryCache();
             }
             else
             {
-                serviceCollection.AddDistributedMemoryCache();
+                serviceCollection.AddDistributedRedisCache(options =>
+                {
+                    options.Configuration = configuration.GetSection("ConfigSBS:MemoryConfig:providerServerMemory").Value;
+                    options.InstanceName = configuration.GetSection("ConfigSBS:MemoryConfig:providerInstanceMemory").Value;
+                });
             }
         }
 

@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Sinqia.Framework.Model;
 using Microsoft.Extensions.Options;
 using System.Collections.Generic;
+using static Sinqia.Framework.Model.ConfigSBS;
 
 namespace Sinqia.Framework.Services
 {
@@ -44,17 +45,25 @@ namespace Sinqia.Framework.Services
         private readonly ITraceInfra _tracerInfra;
         private readonly IOptions<ConfigSBS> _config;
 
+        private readonly MemoryConfig _memoryConfig;
+
         public Configuracao(IServiceProvider service)
         {
             _tracerInfra = service.GetRequiredService<ITraceInfra>();
             _config = service.GetService<IOptions<ConfigSBS>>();
+            _memoryConfig = _config.Value.memoryConfig;
+        }
+
+        public MemoryConfig dadosMemoria()
+        {
+            return _memoryConfig;
         }
 
         public bool utilizaRedis()
         {
             try
             {
-                var usaRedis = _config.Value.memoryConfig.providerRedisMemory;
+                var usaRedis = _config.Value.memoryConfig.providerInMemory;
                 return usaRedis;
             }
             catch
@@ -76,6 +85,32 @@ namespace Sinqia.Framework.Services
             }
         }
 
+
+        // public void addMemory(IServiceCollection serviceCollection, bool usaRedis,
+        //               string providerServerMemory, string providerInstanceMemory)
+        // //public static void addMemory(this IServiceCollection serviceCollection, IConfiguracao conf)
+        // {
+        //     //var _teste = _config.Value.memoryConfig.providerInMemory;
+        //     //var _conf = conf.utilizaRedis;
+        //     serviceCollection.AddOptions();
+        //     if (_config.Value.memoryConfig.providerInMemory)
+        //     {
+        //         serviceCollection.AddDistributedRedisCache(options =>
+        //         {
+        //             // options.Configuration = "localhost:6379";
+        //             // options.InstanceName = "redisPH";
+        //             options.Configuration = _config.Value.memoryConfig.providerServerMemory;
+        //             options.InstanceName = _config.Value.memoryConfig.providerInstanceMemory;
+        //         });
+        //     }
+        //     else
+        //     {
+        //         serviceCollection.AddDistributedMemoryCache();
+        //     }
+
+        //     serviceCollection.AddTransient<IControleMemoria, ControleMemoria>();
+
+        // }
         // public void carregaConexao(string pConexao)
         // {
         //     var builinterno = new ConfigurationProvider

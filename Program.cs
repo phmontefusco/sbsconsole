@@ -30,6 +30,8 @@ namespace sbsconsole
             var serviceProvider = serviceCollection.BuildServiceProvider();
             var tracAux = serviceProvider.GetService<ITraceInfra>();
 
+            var cf = serviceProvider.GetService<IConfiguracao>();
+
             var mem = serviceProvider.GetService<IControleMemoria>();
 
             mem.SetValor("HORA:1", "11");
@@ -42,7 +44,6 @@ namespace sbsconsole
             tracAux.WriteStart(vamosver);
             tracAux.WriteStart(vamosver2);
 
-            var cf = serviceProvider.GetService<IConfiguracao>();
 
             var x = cf.obterValorConexao();
             var testconta = serviceProvider.GetService<ICalcService>();
@@ -77,7 +78,7 @@ namespace sbsconsole
 
             serviceCollection.AddTransient<IConfiguracao, Configuracao>();
 
-            serviceCollection.addMemory(false, "localhost:6379", "redisPH");
+            serviceCollection.addMemory(configuration);
 
             serviceCollection.AddTransient<IControleMemoria, ControleMemoria>();
 
